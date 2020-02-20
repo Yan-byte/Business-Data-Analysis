@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Business Analysis of Logistics Companies</title>
+	<link rel="stylesheet" href="css/sdd.css">
+	
+</head>
+<body>
+	<div class="container-flex" tabindex="0" hidefocus='true'>
+		<!-- Left Part Begin -->
+		<div class="box-left">
+			<!-- Left-top Part Begin -->
+			<div class="left-top">
+				<div class="current-num">
+					<div>Total Volume</div>
+					<p><span id="num40">00</span>,0<span id="num60">00</span>,0<span id="num1">00</span>,0<span id="num2">00</span></p>
+				</div>
+			</div>
+			<!-- Left-top Part End -->
+
+			<!-- Left-center Part Begin -->
+            <div class="left-center">
+                <div class="title-box">
+                    <h6><span data-dataType="expend">Business Income</span></h6>
+                </div>
+                 <p class="unit">Unit：Million</p>
+                <div class="data-box">
+                    <p class="data-number" id="totalProfit"></p>
+                </div>
+            </div>
+            <!-- Left-center Part End -->
+
+            <!-- Left-bottom Part Begin -->
+            <div class="left-bottom" class="select">
+                <div class="title-box">
+                    <h6><span id='product'>Product Category</h6>
+                    <div class="select" tabindex="0" hidefocus="true" id="productCategory">
+                        <select class="select" id="category">
+                            <option selected>Category</option>
+                            <option>Apparel</option>
+                            <option>Books,Music,Video</option>
+                            <option>Furniture</option>
+                            <option>Personal Health</option>
+                            <option>Toys & Hobby</option>
+                            <option>Office Equipment</option>
+                            <option>Food & Beverage</option>
+                            <option>Consumer Electronics</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <div class="filter-con" id="filCon" data-type="1">
+                    </div>
+                    <div id="gdMap" class="gd-map"></div>
+                </div>
+            </div>
+            <!-- Left-bottom Part End -->
+        </div>
+        <!--Left Part End-->
+
+        <!-- Center Part Begin -->
+        <div class="box-center">
+        	<!-- Center-top Part Begin -->
+        	<div class="center-top">
+        		<h1>Business Analysis</h1>
+        	</div>
+        	<!-- Center-top Part End -->
+
+        	<!-- Center-center Part Begin -->
+            <div class="center-center">
+            	<div class="weather-box">
+            		<div class="data">
+            			<p class="time" id="time">00:00:00</p>
+                        <p id="date"></p>
+            		</div>
+            		<div class="weather">
+            			<img id="weatherImg" src="images/weather/sunny.png" alt="">
+                        <div id="weather">
+                            <p class="active">Sunny</p>
+                            <p>20-25℃</p>
+                            <p>Miami,FL</p>
+                        </div>
+            		</div>
+            	</div>
+                <img src="images/line_bg.png" alt="">
+                <div class="select-box">
+                    <ul>
+                        <div class="select" tabindex="0" hidefocus="true" id="Type">
+                            <select class="select" id="maptype">
+                                <option selected>Type</option>
+                                <option data-value="0">line</option>
+                                <option data-value="1">effect</option>
+                            </select>
+                        </div>
+                    </ul>
+                    <div data-type='2'>
+                    	<div class="select" tabindex="0" hidefocus="true" id="divCompany">
+                            <select class="select" id="company">
+                                <option selected>Company</option>
+                                <option>ZTO</option>
+                                <option>SF</option>
+                                <option>YTO</option>
+                                <option>STO</option>
+                                <option>YUNDA</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="select" tabindex="0" hidefocus="true" id="divYear">
+                            <select class="select" id="year">
+                                <option selected>Year</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        	<!-- Center-center Part End -->
+
+            <!-- Center-bottom Part Begin -->
+            <div class="center-bottom">
+               
+            </div>
+            <div class="center-bottom" id='center-bottom'>
+               
+            </div>
+        	<!-- Center-bottom Part End -->
+        </div>
+        <!-- Center Part End -->
+
+        <!-- Right Part Begin-->
+        <div class="box-right">
+            <!-- Right-top Part begin -->
+            <div class="right-top">
+                <div class="title-box">
+                    <h6 id="barTitle">Market Share</h6>
+                </div>
+                <p class="unit">Unit: %</p>
+                <div class="chart-box">
+                    <div id="chart3" style="width:100%;height:100%;"></div>
+                    <div id="chart4" style="width:100%;height:100%;position:absolute;top:0;right: 0;display: none"></div>
+                    <div id="pie" style="width:100%;height:100%;position:absolute;top:0;right: 0;display: none"></div>
+                </div>
+            </div> 
+           <!--Right-top Part End-->
+            <!-- Right-center Part Begin -->
+            <div class="right-center">
+                <div>
+                    <div class="title-box">
+                        <h6><span data-dataType="expend">Business Quantity</span></h6>
+                    </div>
+                    <p class="unit">Unit：Billion</p>
+                </div>
+                <div class="data-box">
+                    <p class="data-number" id="volume"></p>
+                </div>
+            </div>
+            <!-- Right-center Part End-->
+        </div>
+        <!--Right Part End-->
+    </div>
+    <!--All parts end-->
+</body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script rel="text/javascript" src='js/rem.js'></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- <script src="js/layer/layer.min.js"></script> -->
+    <script src="js/china.js"></script>
+    <script rel="text/javascript" src="js/sdd.js"></script>
+</html>
